@@ -19,7 +19,7 @@ function changeBackgroundImage() {
 }
 
 // Change the background image every 30 minutes
-setInterval(changeBackgroundImage, 3 * 60 * 1000); // 30 minutes in milliseconds
+setInterval(changeBackgroundImage, .9 * 60 * 1000); // 30 minutes in milliseconds
 changeBackgroundImage(); // Initial call to set the first image
 
 function calculateTimeLeft(targetDate) {
