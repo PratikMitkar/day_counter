@@ -1,3 +1,27 @@
+// Array of background images
+const backgroundImages = [
+  'url("./peakpx (1).jpg")',
+  'url("./peakpx (2).jpg")',
+  'url("./peakpx.jpg")',
+  'url("./wallpapersden.jpg")',
+  'url("./wallpapersden1.jpg")',
+  'url("./wallpapersden2.jpg")',
+  // Add more image URLs as needed
+];
+
+let currentImageIndex = 0;
+const backgroundOverlay = document.querySelector('.background-overlay');
+
+// Function to change the background image
+function changeBackgroundImage() {
+  backgroundOverlay.style.backgroundImage = backgroundImages[currentImageIndex];
+  currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+}
+
+// Change the background image every 30 minutes
+setInterval(changeBackgroundImage, 30 * 60 * 1000); // 30 minutes in milliseconds
+changeBackgroundImage(); // Initial call to set the first image
+
 function calculateTimeLeft(targetDate) {
   const now = new Date(); // Real-time from system clock
   const target = new Date(targetDate);
